@@ -44,12 +44,6 @@ class HealthStore {
     }
     
     func requestAuthorization(completion: @escaping (Bool) -> Void) {
-        let stepType = HKQuantityType.quantityType(forIdentifier: HKQuantityTypeIdentifier.stepCount)!
-        guard let heathStore = self.healtStore else {
-            return completion(false)
-        }
-        healtStore?.requestAuthorization(toShare: [], read: [stepType]) { success, error in
-            completion(success)
-        }
+        
     }
 }
