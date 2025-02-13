@@ -8,7 +8,7 @@ import MetalKit
 
 struct MetalView: UIViewRepresentable {
     func makeUIView(context: Context) -> MTKView {
-        
+        return MTKView(frame: .zero, device: MTLCreateSystemDefaultDevice())
     }
 
     func updateUIView(_ uiView: MTKView, context: Context) {
@@ -41,12 +41,8 @@ class Renderer: NSObject, MTKViewDelegate {
             
             
 
-            let pipelineDescriptor = MTLRenderPipelineDescriptor()
-            pipelineDescriptor.vertexFunction = vertexFunction
-            pipelineDescriptor.fragmentFunction = fragmentFunction
-            pipelineDescriptor.colorAttachments[0].pixelFormat = .bgra8Unorm
+           
 
-            pipelineState = try device.makeRenderPipelineState(descriptor: pipelineDescriptor)
         } catch {
             fatalError("Error al crear el pipeline: \(error)")
         }
