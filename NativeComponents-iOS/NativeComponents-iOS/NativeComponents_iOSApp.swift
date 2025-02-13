@@ -11,6 +11,6 @@ struct NativeComponents_iOSApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
-        }.modelContainer(for: Item.self)
+        }
     }
 }

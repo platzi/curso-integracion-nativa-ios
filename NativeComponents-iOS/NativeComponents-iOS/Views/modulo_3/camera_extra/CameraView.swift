@@ -5,6 +5,6 @@
 
 import SwiftUI
 
-struct CameraView: View {
+struct CameraView {
    
 }

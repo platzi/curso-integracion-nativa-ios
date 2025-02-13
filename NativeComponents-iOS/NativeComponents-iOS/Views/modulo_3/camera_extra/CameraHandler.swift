@@ -16,17 +16,15 @@ extension CameraHandler: AVCaptureVideoDataOutputSampleBufferDelegate {
     func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
         guard let cgImage = imageFromSampleBuffer(sampleBuffer: sampleBuffer) else { return }
         
-        DispatchQueue.main.async { [unowned self] in
-            self.frame = cgImage
-        }
+        
     }
     
     private func imageFromSampleBuffer(sampleBuffer: CMSampleBuffer) -> CGImage? {
         guard let imageBuffer = CMSampleBufferGetImageBuffer(sampleBuffer) else { return nil }
         let ciImage = CIImage(cvPixelBuffer: imageBuffer)
-        guard let cgImage = context.createCGImage(ciImage, from: ciImage.extent) else { return nil }
+    
         
-        return cgImage
+        return nil
     }
     
 }
