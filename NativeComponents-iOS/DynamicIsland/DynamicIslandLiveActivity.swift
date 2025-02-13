@@ -37,7 +37,26 @@ struct DynamicIslandExtensionLiveActivity: Widget {
             .activitySystemActionForegroundColor(Color.black)
 
         } dynamicIsland: { context in
-            
+            DynamicIsland {
+                DynamicIslandExpandedRegion(.leading) {
+                    
+                }
+                DynamicIslandExpandedRegion(.trailing) {
+                    
+                }
+                DynamicIslandExpandedRegion(.center) {
+                    
+                }
+                DynamicIslandExpandedRegion(.bottom) {
+                    
+                }
+            } compactLeading: {
+                
+            } compactTrailing: {
+
+            } minimal: {
+                
+            }
         }
     }
 }
