@@ -7,16 +7,15 @@ import SwiftUI
 import AuthenticationServices
 
 struct DemoPasskeysAuthView: View {
-    @State private var authenticationStatus = "No autenticado"
-    @State private var authDelegate: AuthDelegate?
-
+    
+    
    var body: some View {
        VStack(spacing: 20) {
-           Text(authenticationStatus)
+           Text("")
                .font(.title)
                .padding()
           
-           Button(action: authenticateUser) {
+           Button("") {
                Text("Iniciar sesión con Passkey")
                    .fontWeight(.bold)
                    .padding()
@@ -29,21 +28,7 @@ struct DemoPasskeysAuthView: View {
    }
   
    func authenticateUser() {
-       let publicKeyCredentialProvider = ASAuthorizationPlatformPublicKeyCredentialProvider(relyingPartyIdentifier: "com.platzi.NativeComponentsiOS")
-       let request = publicKeyCredentialProvider.createCredentialAssertionRequest(challenge: Data("demo-challenge".utf8))
-       
-       let authController = ASAuthorizationController(authorizationRequests: [request])
-       let delegate = AuthDelegate { result in
-           switch result {
-           case .success:
-               authenticationStatus = "Autenticado correctamente"
-           case .failure:
-               authenticationStatus = "Error al autenticar"
-           }
-       }
-       authDelegate = delegate
-       authController.delegate = delegate
-       authController.performRequests()
+      
    }
 }
 
