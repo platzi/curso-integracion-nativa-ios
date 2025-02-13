@@ -6,20 +6,19 @@
 import SwiftUI
 
 struct DemoDynamicIslandView: View {
-    @State var productName = "Libro de SwiftUI - $29.99"
-    @State var currentDeveliverState: DeliveryStatus = .pending
-    @State var activityId = ""
+    
+    
     
     var body: some View {
         VStack {
-            Text(productName)
+            Text("")
                 .font(.system(size: 28, weight: .bold))
                 .padding(.bottom, 32)
             Image(systemName: "book")
                 .resizable()
                 .scaledToFit()
                 .frame(width: 200, height: 200)
-            Text("Estado del pedido: \(currentDeveliverState.rawValue)")
+            Text("Estado del pedido: ")
                 .font(.system(.body))
             Button {
                 buyProduct()
@@ -57,34 +56,15 @@ struct DemoDynamicIslandView: View {
     }
     
     private func buyProduct() {
-        currentDeveliverState = .sent
-        do {
-            activityId = try DeliveryActivityUseCase.startActivity(
-                deliveryStatus: currentDeveliverState,
-                productName: productName,
-                eta: "15:00 pm"
-                )
-        } catch {
-            print(error.localizedDescription)
-        }
+        
     }
     
     private func changeState() {
-        currentDeveliverState = .inTransit
-        Task {
-            await DeliveryActivityUseCase.updateActivity(
-                activityId: activityId,
-                newDeliveryStatus: currentDeveliverState,
-                productName: productName,
-                eta: "1500")
-        }
+        
     }
     
     private func removeState() {
-        currentDeveliverState = .deliviered
-        Task {
-            await DeliveryActivityUseCase.endActivity(activityId: activityId)
-        }
+        
     }
 }
 
