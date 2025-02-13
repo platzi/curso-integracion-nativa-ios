@@ -27,17 +27,7 @@ struct DemoGeoChangeView: View {
                     } maximumValueLabel: {
                         Text("200")
                     }
-                    Circle()
-                        .fill(Color.red)
-                        .frame(height: topCircleHeight)
-                        .onGeometryChange(for: Double.self) { geometry in
-                            return geometry.size.height
-                        } action: { newValue in
-                            bottomCircleHeight = (newValue / 2).rounded()
-                        }
-                    Circle()
-                        .fill(Color.blue)
-                        .frame(height: bottomCircleHeight)
+                    
                     
                 }
             }
