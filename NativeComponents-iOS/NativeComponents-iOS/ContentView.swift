@@ -17,7 +17,7 @@ struct ContentView: View {
                 .frame(minWidth: 0, maxWidth: .infinity)
         }
     }
-    
+     
     var body: some View {
         NavigationStack {
             ZStack {
