@@ -42,38 +42,7 @@ struct WidgetAppEntryView : View {
 
     var body: some View {
         HStack {
-            Image("deadpool")
-                .resizable()
-                .scaledToFit()
-                .frame(width: 80)
-                .cornerRadius(10)
-            VStack(alignment: .leading, spacing: 5) {
-                Text("Deadpool & Wolverine")
-                    .font(.headline)
-                    .bold()
-                    .lineLimit(1)
-                HStack {
-                    Image(systemName: "star.fill")
-                        .foregroundColor(.yellow)
-                        .font(.caption)
-                    Image(systemName: "star.fill")
-                        .foregroundColor(.yellow)
-                        .font(.caption)
-                    Image(systemName: "star.fill")
-                        .foregroundColor(.yellow)
-                        .font(.caption)
-                    Image(systemName: "star.fill")
-                        .foregroundColor(.yellow)
-                        .font(.caption)
-                    Image(systemName: "star")
-                        .foregroundColor(.yellow)
-                        .font(.caption)
-                }
-                Text("Deadpool is offered a place in the MCU by the Time Variance Authority (TVA), but instead recruits a version of Wolverine to save his universe. Deadpool kidnaps another version of Wolverine, but Paradox banishes both Deadpool and Wolverine. Deadpool and Wolverine must then team up to defeat Cassandra Nova, a supervillain who wants to destroy all timelines.")
-                    .font(.caption)
-                    .foregroundColor(.gray)
-                    .lineLimit(3)
-            }
+            
         }
     }
 }
