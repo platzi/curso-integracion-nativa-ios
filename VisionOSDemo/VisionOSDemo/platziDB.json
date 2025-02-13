@@ -1,0 +1,42 @@
+[
+    {
+        "id": 1,
+        "title": "Curso de Community Manager",
+        "description": "Aprende a diseñar estrategias de contenido, gestionar comunidades, y medir el impacto en redes sociales. Desde la planificación de publicaciones hasta la gestión de crisis, este curso te prepara para liderar con éxito en el mundo digital.",
+        "level": "Basic",
+        "syllabus": "Descubriendo el rol del Community Manager\nUn día en la vida de un Community Manager\nPodcast: Estrategias de crecimiento en redes sociales\nDefinir objetivos y planificar contenidos\nCreación de calendarios de contenidos\nStorytelling en redes sociales\nHerramientas para generar ideas creativas y contenidos visuales\nTomar fotos profesionales para redes sociales\nReels virales\nEscucha activa y monitoreo en redes sociales\nGestión de crisis en redes sociales\nCrear y fidelizar comunidades\nÉtica y responsabilidad en Community Management\nPodcast: Secretos de Éxito, Crece como Influencer y Creador de Contenido\nMétricas y KPI’s en redes sociales\nAnalizar engagement y alcance\nIntroducción a la publicidad en redes sociales\nAprovechando la AI para el community management\nPodcast: El Éxito del Community Management en B2B\n",
+        "teacher": "Laura Rico",
+        "score": 4.8,
+        "poster": "https://thumbs.cdn.mdstrm.com/thumbs/512e13acaca1ebcd2f000279/thumb_674661baeaba2652710b55fc_674661baeaba2652710b560d_7s.jpg"
+    },
+    {
+        "id": 2,
+        "title": "Curso de Community Manager",
+        "description": "Aprende a diseñar estrategias de contenido, gestionar comunidades, y medir el impacto en redes sociales. Desde la planificación de publicaciones hasta la gestión de crisis, este curso te prepara para liderar con éxito en el mundo digital.",
+        "level": "Basic",
+        "syllabus": "Descubriendo el rol del Community Manager\nUn día en la vida de un Community Manager\nPodcast: Estrategias de crecimiento en redes sociales\nDefinir objetivos y planificar contenidos\nCreación de calendarios de contenidos\nStorytelling en redes sociales\nHerramientas para generar ideas creativas y contenidos visuales\nTomar fotos profesionales para redes sociales\nReels virales\nEscucha activa y monitoreo en redes sociales\nGestión de crisis en redes sociales\nCrear y fidelizar comunidades\nÉtica y responsabilidad en Community Management\nPodcast: Secretos de Éxito, Crece como Influencer y Creador de Contenido\nMétricas y KPI’s en redes sociales\nAnalizar engagement y alcance\nIntroducción a la publicidad en redes sociales\nAprovechando la AI para el community management\nPodcast: El Éxito del Community Management en B2B\n",
+        "teacher": "Laura Rico",
+        "score": 4.8,
+        "poster": "https://thumbs.cdn.mdstrm.com/thumbs/512e13acaca1ebcd2f000279/thumb_674661baeaba2652710b55fc_674661baeaba2652710b560d_7s.jpg"
+    },
+    {
+        "id": 3,
+        "title": "Curso de React Testing Library",
+        "description": "Asegura la calidad de tu código en React con pruebas unitarias utilizando Testing Library. Aprende a configurar tu entorno de testing, realizar pruebas en componentes de UI y aplicar técnicas como TDD. Utiliza mocks para simular autenticaciones y gestionar datos, y explora el uso de Mock Service Worker (MSW) para probar APIs externas. Conoce algunas estrategias de testing y descubre cómo la IA está revolucionando este campo.",
+        "level": "Basic",
+        "syllabus": "Importancia del Testing en el Desarrollo de Software\nConfiguración del entorno de testing en React\nIntroducción a los Tests: Tu primer test en React\nTesting de componentes UI: Conceptos básicos\nTable Driven Testing en React\nDesarrollo Guiado por Pruebas (TDD) en React\nMocks en Testing\nTesting a un Proceso de Autenticación (Parte 1)\nTesting a un Proceso de Autenticación (Parte 2)\nTesting de gestión de datos con Mocks\nTesting de componentes condicionales con data-testid\nSOLID y Refactorización de Hooks\nTesting de Hooks con Mocks\nTesting de Hooks con Spies\nMock Service Worker (MSW)\nTesting de APIs Externas con MSW (Parte 1)\nTesting de APIs Externas con MSW (Parte 2)\nTest Coverage en React\nInnovación en Testing con IA\nEstrategias de Testing: Cuándo no debes hacer Testing\n",
+        "teacher": "Wilmer Garzón",
+        "score": 4.9,
+        "poster": "https://thumbs.cdn.mdstrm.com/thumbs/512e13acaca1ebcd2f000279/thumb_673cd17158fddafa2d0d8e4c_673cd17158fddafa2d0d8e5d_8s.jpg"
+    },
+    {
+        "id": 4,
+        "title": "Curso de Herramientas de AI para Developers",
+        "description": "Descubre cómo la Inteligencia Artificial está transformando el mundo del desarrollo de software. En este curso, aprenderás a utilizar herramientas como ChatGPT, GitHub Copilot, Claude, TabNine y Replit Agent para escribir código más eficiente y resolver problemas complejos rápidamente. Te enseñaremos a trabajar en equipo con la IA a través del Pair Programming, automatizar tareas repetitivas y mejorar la documentación de tus proyectos con asistentes inteligentes como Notion AI y Mintlify. Además, descubrirás Cursor AI, una herramienta poderosa que te ayudará a mejorar la eficiencia y calidad de tu código utilizando inteligencia artificial.",
+        "level": "Basic",
+        "syllabus": "Revolución AI en el Desarrollo de Software\nEvolución de la AI en programación: Del Pasado al Presente\nChatGPT para desarrollo de código\nDesarrollo de un script con código generado con ChatGPT\nDesarrollo asistido con Claude y sus principios éticos\nGithub Copilot\nPair Programing con Github Copilot\nTabNine\nPair Programming con TabNine\nReplit Agent\nAsistentes generadores de texto\nNotion AI para Desarrolladores\nMintlify: Documentación Automática con AI\nCursor AI: La herramienta revolucionaria para Desarrolladores\nExploración de Cursor AI y sus principales características\nPlanteamiento del proyecto y los casos de uso a desarrollar\nDesarrollo del proyecto - Parte 1\nDesarrollo del proyecto - Parte 2\nLa nueva era del desarrollo\n",
+        "teacher": "Ana Belisa Martinez",
+        "score": 4.8,
+        "poster": "https://thumbs.cdn.mdstrm.com/thumbs/512e13acaca1ebcd2f000279/thumb_674661baeaba2652710b55fc_674661baeaba2652710b560d_7s.jpg"
+    }
+]
