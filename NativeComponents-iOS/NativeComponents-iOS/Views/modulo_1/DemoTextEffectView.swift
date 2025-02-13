@@ -18,13 +18,8 @@ struct DemoTextEffectView: View {
                     RoundedRectangle(cornerRadius: 8)
                         .fill(Color(uiColor: .tertiarySystemGroupedBackground))
                         .frame(height: 140)
-                    WobbleText(
-                        showText: $bobbleText,
-                        text: "Nunca pares de aprender",
-                        duration: 2
-                    )
-                    .font(.system(size: 35, weight: .semibold, design: .rounded))
-                    .foregroundStyle(Color.green.gradient)
+                    
+                   
                 }
                 .padding(.vertical)
             }
