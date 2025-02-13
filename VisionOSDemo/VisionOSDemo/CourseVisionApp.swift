@@ -14,11 +14,6 @@ struct CourseVisionApp: App {
             ContentView()
                 .environment(coursesVM)
         }
-        WindowGroup(id: "poster") {
-            if let selection = coursesVM.selection {
-                CoursePoster(course: selection)
-            }
-        }
-        .defaultSize(CGSize(width: 200, height: 200))
+        
     }
 }
