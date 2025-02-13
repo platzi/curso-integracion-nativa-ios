@@ -8,15 +8,7 @@ import MetalKit
 
 struct MetalView: UIViewRepresentable {
     func makeUIView(context: Context) -> MTKView {
-        let mtkView = MTKView()
-        if let device = MTLCreateSystemDefaultDevice() {
-            mtkView.device = device
-            mtkView.delegate = context.coordinator
-            mtkView.clearColor = MTLClearColor(red: 0.1, green: 0.1, blue: 0.1, alpha: 1)
-        } else {
-            fatalError("Dispositivo Metal no disponible")
-        }
-        return mtkView
+        
     }
 
     func updateUIView(_ uiView: MTKView, context: Context) {
@@ -44,11 +36,10 @@ class Renderer: NSObject, MTKViewDelegate {
         self.commandQueue = device.makeCommandQueue()
 
         do {
-            let library = try device.makeLibrary(source: shaderSource, options: nil)
-            guard let vertexFunction = library.makeFunction(name: "vertex_main"), let fragmentFunction = library.makeFunction(name: "fragment_main")
-            else {
-                fatalError("Error al cargar funciones de Metal")
-            }
+            
+            
+            
+            
 
             let pipelineDescriptor = MTLRenderPipelineDescriptor()
             pipelineDescriptor.vertexFunction = vertexFunction
@@ -62,14 +53,10 @@ class Renderer: NSObject, MTKViewDelegate {
     }
 
     func draw(in view: MTKView) {
-        guard let drawable = view.currentDrawable, let renderPassDescriptor = view.currentRenderPassDescriptor else {
-            return
-        }
-    
-        let commandBuffer = commandQueue.makeCommandBuffer()
-        let renderCommandEncoder = commandBuffer?.makeRenderCommandEncoder(descriptor: renderPassDescriptor)
         
-        renderCommandEncoder?.setRenderPipelineState(pipelineState)
+        
+        
+        
 
         let vertices: [Float] = [
            -0.5,  0.5, 0.0,
@@ -86,12 +73,8 @@ class Renderer: NSObject, MTKViewDelegate {
         let vertexBuffer = device.makeBuffer(bytes: vertices, length: MemoryLayout<Float>.size * vertices.count, options: [])
         let indexBuffer = device.makeBuffer(bytes: indices, length: MemoryLayout<UInt16>.size * indices.count, options: [])
 
-        renderCommandEncoder?.setVertexBuffer(vertexBuffer, offset: 0, index: 0)
-        renderCommandEncoder?.drawIndexedPrimitives(type: .triangle, indexCount: indices.count, indexType: MTLIndexType.uint16, indexBuffer: indexBuffer!, indexBufferOffset: 0)
         
-        renderCommandEncoder?.endEncoding()
-        commandBuffer?.present(drawable)
-        commandBuffer?.commit()
+        
     }
 
     func mtkView(_ view: MTKView, drawableSizeWillChange size: CGSize) {

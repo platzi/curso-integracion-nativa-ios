@@ -8,7 +8,7 @@ import SwiftUI
 struct DemoMetalView: View {
     var body: some View {
         VStack {
-            MetalView()
+            
         }
     }
 }
