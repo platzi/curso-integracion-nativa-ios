@@ -4,13 +4,11 @@
 //
 
 import SwiftUI
-import SwiftData
 
 struct DemoSwiftDataView: View {
-    @Environment(\.modelContext) private var context
-    @Query(sort: \Item.title) private var items: [Item]
-    @State private var showingAddSheet = false
-        
+    
+      
+    
     var body: some View {
         NavigationStack {
             VStack {
@@ -20,7 +18,8 @@ struct DemoSwiftDataView: View {
                         .padding(.leading, 20)
                     Spacer()
                     Button {
-                        showingAddSheet.toggle()
+
+
                     } label: {
                         Image(systemName: "plus")
                             .font(.system(size: 22))
@@ -32,43 +31,14 @@ struct DemoSwiftDataView: View {
                 .padding(.bottom, 10)
                 
                 List {
-                    ForEach(items) { item in
-                        Toggle(item.title, isOn:
-                                Binding(
-                                    get: { item.done },
-                                    set: {
-                                        newValue in
-                                        item.done = newValue
-                                        do {
-                                            try context.save()
-                                        } catch {
-                                            print("Error al guardar datos")
-                                        }
-                                    }
-                                )
-                        )
-                        .toggleStyle(CheckboxToggleStyle())
-                        .frame(height: 60)
-                        .swipeActions(edge: .trailing, allowsFullSwipe: true) {
-                            Button(role: .destructive) {
-                                context.delete(item)
-                                do {
-                                    try context.save()
-                                } catch {
-                                    print("Error al eliminar datos")
-                                }
-                            } label: {
-                                Label("Borrar", systemImage: "trash")
-                            }
-                        }
-                    }
+                    
+                    
                     
                     
                 }
             }
-        }
-        .sheet(isPresented: $showingAddSheet) {
-            AddItemView()
+            
+            
         }
     }
 }
